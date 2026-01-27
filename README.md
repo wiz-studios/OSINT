@@ -7,7 +7,7 @@ WireTapper is a wireless OSINT tool designed to discover, map, and analyze radio
 WireTapper detects and correlates signals from common wireless technologies, helping users understand what devices exist, where they are likely located, and how they interact, without active intrusion.
 
 🔗 **Website:** https://haybnz.web.app/
-🔗 **Blog on WireTapper:** https://haybnz.web.app/
+🔗 **Blog on WireTapper:** [https://haybnz.web.app/](https://medium.com/@h9z/wire-tapper-wireless-osint-signal-intelligence-platform-e5104659a1cb)
 
 
 ## 📶 Supported Signal Intelligence
