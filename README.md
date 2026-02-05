@@ -79,40 +79,38 @@ Follow these steps to get WireTapper up and running:
 2. **Install dependencies:**
    It is recommended to use a virtual environment.
    ```bash
-   pip install -r WireTapper.txt
+   python -m venv .venv
+   # Windows:
+   .venv\Scripts\pip install -r requirements.txt -r requirements-dev.txt
+   # Linux/macOS:
+   # .venv/bin/pip install -r requirements.txt -r requirements-dev.txt
    ```
 
 3. **Configure API Keys and Run:**
 
    Choose one of the following methods to configure your API keys and run the application:
 
-   ### Method 1: Modify `app.py` (Direct Configuration)
-   Open `app.py` and manually enter your API keys by replacing the empty strings:
-   ```python
-   WIGLE_API_NAME = "your_wigle_api_name"
-   WIGLE_API_TOKEN = "your_wigle_api_token"
-   OPENCELLID_API_KEY = "your_opencellid_api_key"
-   SHODAN_API_KEY = "your_shodan_api_key"
-   ```
-   Then, start the server:
-   ```bash
-   python app.py
-   ```
-
-   ### Method 2: Use `app-env.py` (Environment Variables)
-   This is the recommended approach for better security. You can export your keys in the terminal:
+   ### Method 1 (Recommended): Environment Variables / `.env`
+   Export your keys in the terminal:
    ```bash
    export WIGLE_API_NAME="your_wigle_api_name"
    export WIGLE_API_TOKEN="your_wigle_api_token"
    export OPENCELLID_API_KEY="your_opencellid_api_key"
    export SHODAN_API_KEY="your_shodan_api_key"
    ```
-   Alternatively, you can define these keys in a `.env` file. Then, start the server:
+   Alternatively, copy `.env.example` to `.env` and fill in values.
+
+   Then, start the server:
    ```bash
-   python app-env.py
+   python app.py
+   # or: python -m wiretapper
    ```
 
    The application will be available at `http://localhost:8080`.
+
+## 🔐 Notes on Secrets
+
+- Never commit real API keys. Use `.env` locally; it is ignored by git.
 
 ## 📷 Screenshots
 
