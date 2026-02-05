@@ -31,4 +31,3 @@ def set(key: str, value: Any, *, ttl_s: float) -> None:
 def stats() -> dict[str, int]:
     # Best-effort (doesn't eagerly purge everything).
     return {"items": len(_CACHE)}
-

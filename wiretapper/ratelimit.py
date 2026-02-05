@@ -37,4 +37,3 @@ def allow(key: str, *, per_minute: int) -> bool:
         )
         _BUCKETS[key] = bucket
     return bucket.allow(1.0)
-
